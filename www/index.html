@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="app_framework/themeRelease.js"></script>
+
+        <script type="application/javascript" src="js/alumnos.js"></script>
+        <script type="application/javascript" src="js/cursoNumero.js"></script>
+        <script type="application/javascript" src="js/profesores.js"></script>
+        <script type="application/javascript" src="js/cursoLetra.js"></script>
+        <script type="application/javascript" src="js/cursoSocial.js"></script>
+
+        <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+        <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
+    </head>
+
+    <body id="afui" class="af">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <header class="wrapping-col wrap-element uib_w_1" data-uib="app_framework/header" data-ver="2" id="af-header-0">
+            <h1>INGRESAR</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_5 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-1"><a class="button backButton">Back</a>
+            <h1>ALUMNOS</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_10 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-2"><a class="button backButton">Back</a>
+            <h1>CURSOS</h1>
+        </header>
+
+        <header class="wrapping-col wrap-element uib_w_22" data-uib="app_framework/header" data-ver="2" id="af-header-3">
+            <h1></h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_23 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-4"><a class="button backButton">Back</a>
+            <h1>ALUMNOS</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_29 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-5"><a class="button backButton">Back</a>
+            <h1>NUMEROS</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_35 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-6"><a class="button backButton">Back</a>
+            <h1>LETRAS</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_41 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-7"><a class="button backButton">Back</a>
+            <h1>DATOS LIBRO</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_49 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-8"><a class="button backButton">Back</a>
+            <h1>RESERVAR</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_54 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-9"><a class="button backButton">Back</a>
+            <h1>USER BIBLIOTECA</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_58 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-10"><a class="button backButton">Back</a>
+            <h1>DATOS LUMNO</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_81 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-11"><a class="button backButton">Back</a>
+            <h1>SOCIALES</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_88 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-12"><a class="button backButton">Back</a>
+            <h1>RESER SOCIALES</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_94 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-13"><a class="button backButton">Back</a>
+            <h1>ADMINISTRADOR</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_100 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-14"><a class="button backButton">Back</a>
+            <h1>NUEVO USER</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_108 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-15"><a class="button backButton">Back</a>
+            <h1>CREA UNA CUENTA</h1>
+        </header>
+        <div class="uwrap" id="content">
+            <div class="upage vertical-col panel" id="mainpage" data-header="af-header-0" data-footer="af-footer-10">
+                <div class="table-thing with-label widget uib_w_2 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idUsuario">Usuario</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" id="idUsuario" value="joel">
+                </div>
+                <div class="table-thing with-label widget uib_w_3 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idContrasenia">Constrasenia</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" id="idContrasenia" value="joel">
+                </div>
+
+                <div class="table-thing with-label widget uib_w_76 d-margins" data-uib="app_framework/select" data-ver="1">
+                    <label class="narrow-control label-inline" for="idSelectTipo">Tipo</label>
+
+                    <select class="wide-control" id="idSelectTipo">
+                        <option>ALUMNO</option>
+                        <option>ADMINISTRADOR</option>
+                    </select>
+                </div><a class="button widget uib_w_4 d-margins icon user yellow" data-uib="app_framework/button" data-ver="1" id="idLogin" href="#mainpage" data-transition="fade">INGRESAR</a>
+                <div class="widget uib_w_106 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Si aun no tiene una cuenta haga click :</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div><a class="button widget uib_w_107 d-margins gray" data-uib="app_framework/button" data-ver="1">AQUI</a>
+            </div>
+
+            <div class="widget uib_w_47 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div>
+                    <p>APELLIDOS: MORENO MAYHURE</p>
+                    <p>NOMBRES: JOEL SAUL</p>
+                    <p>CODIGO: 100872021</p>
+                </div>
+            </div>
+            <div class="widget uib_w_48 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div>
+                    <p>ELIJA EL TIPO DE LIBRO</p>
+                </div>
+            </div>
+            <div class="widget uib_w_63 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div>
+                    <p>APELLIDOS: MORENO MAYHUIRE</p>
+                    <p>NOMBRES: JOEL SAUL</p>
+                    <p>CODIGO: 1008720121</p>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="upage vertical-col panel" id="idPageAlumnos" data-header="af-header-4" data-footer="af-footer-0">
+
+                <div class="widget uib_w_65 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>APELLIDOS: MORENO MAYHUIRE</p>
+                        <p>NOMBRES: JOEL SAUL</p>
+                        <p>CODIGO: 1008720121</p>
+                    </div>
+                </div>
+
+                <div class="table-thing with-label widget uib_w_67 d-margins" data-uib="app_framework/radio_button_group" data-ver="1" data-child-name="af-group-1" id="idGrupoLibros">
+                    <label class="narrow-control label-top-left">ELIJA UNO DE LOS 3 TIPO DE LIBROS</label>
+
+                    <div class="wide-control">
+                        <div class="widget uib_w_68" data-uib="app_framework/radio_button" data-ver="1">
+                            <input type="radio" id="idRadNumeros" name="af-group-1">
+                            <label class="content-box" for="idRadNumeros">NUMEROS</label>
+                        </div>
+                        <div class="widget uib_w_69" data-uib="app_framework/radio_button" data-ver="1">
+                            <input type="radio" id="idRadLetras" name="af-group-1">
+                            <label class="content-box" for="idRadLetras">LETRAS</label>
+                        </div>
+                        <div class="widget uib_w_70" data-uib="app_framework/radio_button" data-ver="1">
+                            <input type="radio" id="idRadSocial" name="af-group-1">
+                            <label class="content-box" for="idRadSocial">SOCIALES</label>
+                        </div>
+                    </div>
+                </div>
+                <a class="button widget uib_w_46 d-margins yellow" data-uib="app_framework/button" data-ver="1" id="idSeleccionar">SELECCIONE</a>
+            </div>
+            <div class="upage vertical-col panel" id="idPageLibroNumeros" data-header="af-header-5" data-footer="af-footer-1">
+                <ul class="list widget uib_w_31 d-margins" data-uib="app_framework/listview" data-ver="1" id="idListaNumeros">
+                    <li class="widget uib_w_32" data-uib="app_framework/listitem" data-ver="1" id="idLisCalculo"><a>CALCULO I</a>
+                    </li>
+                    <li class="widget uib_w_33" data-uib="app_framework/listitem" data-ver="1"><a>ANALISIS MATEMATICO I</a>
+                    </li>
+                    <li class="widget uib_w_34" data-uib="app_framework/listitem" data-ver="1"><a>ANALISIS MATEMATICO II</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="upage vertical-col panel" id="idPageLibroLetras" data-header="af-header-6" data-footer="af-footer-2">
+                <ul class="list widget uib_w_37 d-margins" data-uib="app_framework/listview" data-ver="1" id="idListaLetras">
+                    <li class="widget uib_w_38" data-uib="app_framework/listitem" data-ver="1"><a>BASE DE DATOS I</a>
+                    </li>
+                    <li class="widget uib_w_39" data-uib="app_framework/listitem" data-ver="1"><a>INTELIGENCIA ARTIFICIAL</a>
+                    </li>
+                    <li class="widget uib_w_40" data-uib="app_framework/listitem" data-ver="1"><a>TEORIA DE SISTEMAS</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="upage vertical-col panel" id="idLibNumReserva" data-header="af-header-7" data-footer="af-footer-3">
+                <div class="widget uib_w_43 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>NOMBRE: MATEMATICA I</p>
+                        <p>AUTOR: MITAC TORO</p>
+                    </div>
+                </div><a class="button widget uib_w_44 d-margins yellow" data-uib="app_framework/button" data-ver="1" id="idConsultarNum">CONSULTAR</a>
+                <div class="widget uib_w_73 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p class="ellipsis" style="-webkit-line-clamp: 3;">Si desea reservar Haga Click aqui</p>
+                    </div>
+                </div><a class="button widget uib_w_45 d-margins green" data-uib="app_framework/button" data-ver="1" id="idReservarNum">RESERVAR</a>
+            </div>
+            <div class="upage vertical-col panel" id="idLibLetReservar" data-header="af-header-8" data-footer="af-footer-4">
+                <div class="widget uib_w_51 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>NOMBRE: BASE DE DATOS I</p>
+                        <p>AUTOR: DINO FOX</p>
+                    </div>
+                </div><a class="button widget uib_w_52 d-margins yellow" data-uib="app_framework/button" data-ver="1" id="idConsultaLet">CONSULTAR</a>
+                <div class="widget uib_w_74 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Si desea reservar haga Click aqui</p>
+                    </div>
+                </div><a class="button widget uib_w_53 d-margins green" data-uib="app_framework/button" data-ver="1" id="idReservarLet">RESERVAR</a>
+            </div>
+            <div class="upage vertical-col panel" id="idPageAdministrador" data-header="af-header-9" data-footer="af-footer-5">
+
+                <ul class="list widget uib_w_77 d-margins" data-uib="app_framework/listview" data-ver="1" id="listaUsuarios">
+                    <li class="widget uib_w_78" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                    </li>
+                    <li class="widget uib_w_79" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                    </li>
+                    <li class="widget uib_w_80" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="upage vertical-col panel" id="idPageConsultaAlum" data-header="af-header-10" data-footer="af-footer-6">
+                <div class="widget uib_w_60 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>APELLIDOS: MORENO MAYHUIRE</p>
+                        <p>NOMBRES: JOEL SAUL</p>
+                        <p>LIBRO: CALCULO III</p>
+                        <p>AUTOR: MITAC TORO</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div><a class="button widget uib_w_61 d-margins orange" data-uib="app_framework/button" data-ver="1" id="idEntregar">ENTREGAR</a><a class="button widget uib_w_62 d-margins green" data-uib="app_framework/button" data-ver="1" id="idDebuelto">DEBUELTO</a>
+            </div>
+            <div class="upage vertical-col panel" id="idPageLibroSocia" data-header="af-header-11" data-footer="af-footer-8">
+                <ul class="list widget uib_w_83 d-margins" data-uib="app_framework/listview" data-ver="1" id="idListaSocial">
+                    <li class="widget uib_w_84" data-uib="app_framework/listitem" data-ver="1"><a>FILOSOFIA</a>
+                    </li>
+                    <li class="widget uib_w_85" data-uib="app_framework/listitem" data-ver="1"><a>ETICA</a>
+                    </li>
+                    <li class="widget uib_w_86" data-uib="app_framework/listitem" data-ver="1"><a>HUMANIDADES</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="upage vertical-col panel" id="idPageLibSocReserva" data-header="af-header-12" data-footer="af-footer-9">
+                <div class="widget uib_w_90 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>NOMBRE: ETICA I</p>
+                        <p>AUTOR: SAMS REMES</p>
+                    </div>
+                </div><a class="button widget uib_w_91 d-margins yellow" data-uib="app_framework/button" data-ver="1" id="idSocConsultar">CONSULTAR</a>
+                <div class="widget uib_w_93 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Si desea reservar haga Click aqui</p>
+                    </div>
+                </div><a class="button widget uib_w_92 d-margins green" data-uib="app_framework/button" data-ver="1" id="idSocReservar">RESERVAR</a>
+            </div>
+            <div class="upage vertical-col panel" id="IdPageDatosAdmi" data-header="af-header-13" data-footer="af-footer-11">
+                <div class="widget uib_w_97 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>NOMBRES: ANDY</p>
+                        <p>APELLIDOS: MORENO MAYHUIRE</p>
+                        <p>CODIGO:10123</p>
+                    </div>
+                </div><a class="button widget uib_w_98 d-margins green" data-uib="app_framework/button" data-ver="1" id="idNuevoUser" href="#idPageNuevoUser" data-transition="fade">NUEVO USUARIO</a><a class="button widget uib_w_99 d-margins yellow" data-uib="app_framework/button"
+                data-ver="1" id="idListarUser">LISTAR USER</a>
+            </div>
+            <div class="upage vertical-col panel" id="idPageNuevoUser" data-header="af-header-14" data-footer="af-footer-12">
+                <div class="table-thing with-label widget uib_w_102 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">NOMBRES</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_103 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">APELLIDOS</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_104 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">CODIGO</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div><a class="button widget uib_w_105 d-margins yellow" data-uib="app_framework/button" data-ver="1" id="idRegistrar">REGISTRAR</a>
+            </div>
+            <div class="upage vertical-col panel" id="idPageCrearCuenta" data-header="af-header-15" data-footer="af-footer-13">
+                <div class="table-thing with-label widget uib_w_110 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">Usuario</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_111 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">Contrasenia</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_112 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">Verifique</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div><a class="button widget uib_w_113 d-margins" data-uib="app_framework/button" data-ver="1" id="IdRegistrarCuenta">REGISTRAR</a>
+            </div>
+        </div>
+        <footer class="wrap-element uib_w_109" data-uib="app_framework/footer" data-ver="1" id="af-footer-13"></footer>
+        <footer class="wrap-element uib_w_101" data-uib="app_framework/footer" data-ver="1" id="af-footer-12"></footer>
+        <footer class="wrap-element uib_w_96" data-uib="app_framework/footer" data-ver="1" id="af-footer-11"></footer>
+        <footer class="wrap-element uib_w_95" data-uib="app_framework/footer" data-ver="1" id="af-footer-10"></footer>
+        <footer class="wrap-element uib_w_89" data-uib="app_framework/footer" data-ver="1" id="af-footer-9"></footer>
+        <footer class="wrap-element uib_w_82" data-uib="app_framework/footer" data-ver="1" id="af-footer-8"></footer>
+        <footer class="wrap-element uib_w_75" data-uib="app_framework/footer" data-ver="1" id="af-footer-7"></footer>
+        <footer class="wrap-element uib_w_59" data-uib="app_framework/footer" data-ver="1" id="af-footer-6"></footer>
+        <footer class="wrap-element uib_w_55" data-uib="app_framework/footer" data-ver="1" id="af-footer-5"></footer>
+        <footer class="wrap-element uib_w_50" data-uib="app_framework/footer" data-ver="1" id="af-footer-4"></footer>
+        <footer class="wrap-element uib_w_42" data-uib="app_framework/footer" data-ver="1" id="af-footer-3"></footer>
+        <footer class="wrap-element uib_w_36" data-uib="app_framework/footer" data-ver="1" id="af-footer-2"></footer>
+        <footer class="wrap-element uib_w_30" data-uib="app_framework/footer" data-ver="1" id="af-footer-1"></footer>
+        <footer class="wrap-element uib_w_24" data-uib="app_framework/footer" data-ver="1" id="af-footer-0"></footer>
+    </body>
+
+</html>
